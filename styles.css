@@ -349,33 +349,6 @@ body.light-mode .orb { opacity: 0.18; }
 
 .about-side { display: grid; gap: 20px; }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.stat-card {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  padding: 20px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-.stat-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.stat-number {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.stat-label { font-size: 0.78rem; color: var(--text-muted); line-height: 1.35; }
-
 .fact-list {
   display: grid;
   gap: 10px;
