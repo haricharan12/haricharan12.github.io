@@ -97,9 +97,6 @@
     </nav>
 
     <div class="header-actions">
-      <button class="icon-btn" id="terminal-toggle" title="Open terminal easter egg" aria-haspopup="dialog" aria-controls="terminal-overlay">
-        <i class="fas fa-terminal" aria-hidden="true"></i>
-      </button>
       <button class="icon-btn" id="theme-toggle" title="Toggle theme">
         <i class="fas fa-sun" aria-hidden="true"></i>
       </button>
@@ -152,32 +149,38 @@
             My path here ran through <strong>Ernst &amp; Young</strong>, where I spent two years as a red teamer
             and security consultant breaking into networks and applications for a living, and <strong>Optum
             (UnitedHealth Group)</strong>, where I built one of the earlier real-world MCP and agentic-AI threat
-            models used inside a Fortune 5 healthcare org. I hold an MS in Information Security from
-            <strong>Carnegie Mellon University</strong>, and I still compete on CMU's CTF team, <strong>Plaid
-            Parliament of Pwning</strong>.
+            models used inside a Fortune 5 healthcare organization. I hold an MS in Information Security from
+            <strong>Carnegie Mellon University</strong>.
           </p>
-          <p>
-            What I care about: making AI systems that hold up under real adversarial pressure, and explaining
-            security risk in language executives and engineers can both act on.
-          </p>
+          <blockquote class="about-quote">
+            What I care about: AI systems that hold up under real adversarial pressure, and security findings
+            that engineers and executives can both act on.
+          </blockquote>
         </div>
 
-        <div class="about-facts reveal">
-          <div class="fact-card">
-            <i class="fas fa-location-dot" aria-hidden="true"></i>
-            <div><span class="fact-label">Based in</span><span class="fact-value">San Francisco Bay Area</span></div>
+        <div class="about-side reveal">
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">70+</span>
+              <span class="stat-label">Applications assessed at EY</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Vulnerabilities reported</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">65%</span>
+              <span class="stat-label">Attack surface reduced at Optum</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">MS</span>
+              <span class="stat-label">Information Security, CMU</span>
+            </div>
           </div>
-          <div class="fact-card">
-            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-            <div><span class="fact-label">Education</span><span class="fact-value">MS Information Security, Carnegie Mellon</span></div>
-          </div>
-          <div class="fact-card">
-            <i class="fas fa-briefcase" aria-hidden="true"></i>
-            <div><span class="fact-label">Currently</span><span class="fact-value">Sr. Data Scientist, Fractal Analytics</span></div>
-          </div>
-          <div class="fact-card">
-            <i class="fas fa-flag" aria-hidden="true"></i>
-            <div><span class="fact-label">CTF team</span><span class="fact-value">Plaid Parliament of Pwning (PPP)</span></div>
+
+          <div class="fact-list">
+            <div class="fact-row"><i class="fas fa-location-dot" aria-hidden="true"></i> San Francisco Bay Area</div>
+            <div class="fact-row"><i class="fas fa-briefcase" aria-hidden="true"></i> Sr. Data Scientist, Fractal Analytics</div>
           </div>
         </div>
       </div>
@@ -408,15 +411,15 @@
         Open to conversations on AI/LLM security, red teaming, and research collaboration.
         Easiest way to reach me is email.
       </p>
-      <div class="contact-links reveal">
-        <a class="contact-link" href="mailto:sharicharan1729@gmail.com">
-          <i class="fas fa-envelope" aria-hidden="true"></i> sharicharan1729@gmail.com
+      <div class="contact-buttons reveal">
+        <a class="social-btn social-btn-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sharicharan1729@gmail.com" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-envelope" aria-hidden="true"></i> Email on Gmail
         </a>
-        <a class="contact-link" href="https://linkedin.com/in/haricharans" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin" aria-hidden="true"></i> linkedin.com/in/haricharans
+        <a class="social-btn social-btn-linkedin" href="https://linkedin.com/in/haricharans" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
         </a>
-        <a class="contact-link" href="https://github.com/haricharan12" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" aria-hidden="true"></i> github.com/haricharan12
+        <a class="social-btn social-btn-github" href="https://github.com/haricharan12" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
         </a>
       </div>
     </div>
@@ -424,36 +427,8 @@
 </main>
 
 <footer class="site-footer">
-  <p>Built by Haricharan S &middot; <button id="footer-terminal-btn" class="link-btn">open the terminal</button> if you want it the old way.</p>
+  <p>Built by Haricharan S</p>
 </footer>
-
-<!-- Terminal easter egg overlay -->
-<div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Terminal easter egg" hidden>
-  <div class="terminal-container">
-    <div class="terminal-header">
-      <div class="terminal-buttons">
-        <button class="btn-close" id="terminal-close" title="Close" aria-label="Close terminal"></button>
-        <span class="btn-minimize"></span>
-        <span class="btn-maximize"></span>
-      </div>
-      <div class="terminal-title">haricharan@portfolio: ~</div>
-    </div>
-    <div class="terminal-body" id="terminal-body">
-      <div class="terminal-line">
-        <span class="prompt">haricharan@portfolio:~$</span> <span class="typed-text">./welcome.sh</span>
-      </div>
-      <div class="output">
-        <p class="welcome-text">Welcome to the legacy terminal.</p>
-        <p class="help-text">Type <span class="highlight">'help'</span> to see available commands.</p>
-      </div>
-      <div id="terminal-output-area"></div>
-      <div class="input-line">
-        <span class="prompt">haricharan@portfolio:~$</span>
-        <input type="text" id="terminal-input" class="command-input" autocomplete="off" spellcheck="false">
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>

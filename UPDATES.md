@@ -1,3 +1,15 @@
+# Portfolio Updates — June 2026 Follow-up
+
+- Removed the terminal easter egg entirely (overlay, toggle button, footer link, and all supporting CSS/JS) —
+  the page is now purely the narrative layout.
+- Contact section rebuilt as three branded action buttons: Gmail (opens a compose window addressed to
+  sharicharan1729@gmail.com), LinkedIn, and GitHub.
+- About section redone: removed the line about currently competing on CMU's CTF team, tightened the
+  narrative, and replaced the small fact-card grid with a pull-quote plus a stat grid (apps assessed,
+  vulnerabilities reported, attack-surface reduction, CMU MS) for a more visual, less resume-like feel.
+
+---
+
 # Portfolio Updates — June 2026 Redesign
 
 ## Full layout redesign

@@ -1,6 +1,6 @@
 /* =========================================================
    Haricharan S — Portfolio
-   Modern editorial layout with a terminal easter egg.
+   Modern editorial layout.
    ========================================================= */
 
 :root {
@@ -334,20 +334,92 @@ body.light-mode .orb { opacity: 0.18; }
 .about-copy p { margin-bottom: 18px; font-size: 1.02rem; }
 .about-copy strong { color: var(--text-primary); }
 
-.about-facts { display: grid; gap: 14px; }
-.fact-card {
+.about-quote {
+  margin-top: 8px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--accent);
+  background: var(--bg-elevated);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-style: normal;
+}
+
+.about-side { display: grid; gap: 20px; }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.stat-card {
   background: var(--bg-elevated);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
-  padding: 18px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.stat-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.stat-label { font-size: 0.78rem; color: var(--text-muted); line-height: 1.35; }
+
+.fact-list {
+  display: grid;
+  gap: 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+}
+.fact-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
 }
-.fact-card i { color: var(--accent); font-size: 1.2rem; width: 22px; text-align: center; }
-.fact-card div { display: flex; flex-direction: column; gap: 2px; }
-.fact-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-.fact-value { color: var(--text-primary); font-weight: 600; font-size: 0.92rem; }
+.fact-row i { color: var(--accent); width: 18px; text-align: center; }
+
+/* ---------- Social / contact buttons ---------- */
+.contact-buttons { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.social-btn i { font-size: 1.15rem; transition: color 0.25s ease; }
+.social-btn:hover { transform: translateY(-3px); box-shadow: 0 12px 26px var(--shadow); color: #fff; }
+
+.social-btn-gmail i { color: #ea4335; }
+.social-btn-gmail:hover { background: #ea4335; border-color: #ea4335; }
+.social-btn-gmail:hover i { color: #fff; }
+
+.social-btn-linkedin i { color: #0a66c2; }
+.social-btn-linkedin:hover { background: #0a66c2; border-color: #0a66c2; }
+.social-btn-linkedin:hover i { color: #fff; }
+
+.social-btn-github i { color: var(--text-primary); }
+.social-btn-github:hover { background: #24292e; border-color: #24292e; }
+.social-btn-github:hover i { color: #fff; }
 
 /* ---------- Timeline ---------- */
 .timeline { position: relative; padding-left: 32px; }
@@ -489,18 +561,6 @@ body.light-mode .orb { opacity: 0.18; }
 .contact-section { text-align: center; }
 .contact-section .section-title { margin-left: auto; margin-right: auto; }
 .contact-lead { max-width: 560px; margin: 0 auto 36px; font-size: 1.02rem; }
-.contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-.contact-link {
-  display: flex; align-items: center; gap: 10px;
-  padding: 14px 22px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  font-weight: 500;
-  transition: all 0.25s ease;
-}
-.contact-link i { color: var(--accent); font-size: 1.1rem; }
-.contact-link:hover { border-color: var(--accent); color: var(--text-primary); transform: translateY(-3px); box-shadow: 0 10px 24px var(--shadow); }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -509,92 +569,6 @@ body.light-mode .orb { opacity: 0.18; }
   color: var(--text-muted);
   font-size: 0.85rem;
 }
-.link-btn {
-  background: none;
-  border: none;
-  color: var(--accent);
-  cursor: pointer;
-  font: inherit;
-  text-decoration: underline;
-  padding: 0;
-}
-
-/* =========================================================
-   Terminal easter egg overlay (legacy CLI, preserved)
-   ========================================================= */
-.terminal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  background: rgba(4, 6, 10, 0.78);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.terminal-overlay[hidden] { display: none; }
-
-.terminal-overlay .terminal-container {
-  width: 100%;
-  max-width: 900px;
-  max-height: 82vh;
-  background: #0d1117;
-  border-radius: 10px;
-  border: 1px solid #30363d;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.terminal-overlay .terminal-header {
-  background: #161b22;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #30363d;
-}
-.terminal-buttons { display: flex; gap: 8px; margin-right: 16px; }
-.terminal-buttons span, .terminal-buttons button {
-  width: 12px; height: 12px; border-radius: 50%;
-  border: none; padding: 0; cursor: pointer;
-}
-.btn-close { background: #ff5f56; }
-.btn-minimize { background: #ffbd2e; }
-.btn-maximize { background: #27c93f; }
-.terminal-title { color: #8b949e; font-size: 0.85rem; font-family: var(--font-mono); }
-
-.terminal-overlay .terminal-body {
-  padding: 20px;
-  overflow-y: auto;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: #c9d1d9;
-  line-height: 1.6;
-}
-.terminal-overlay .prompt { color: #58a6ff; font-weight: 600; margin-right: 8px; }
-.terminal-overlay .typed-text, .terminal-overlay .welcome-text { color: #3ddc84; }
-.terminal-overlay .help-text { color: #8b949e; margin-top: 10px; }
-.terminal-overlay .highlight { color: #58a6ff; background: #161b22; padding: 2px 6px; border-radius: 3px; }
-.terminal-overlay .error { color: #f85149; }
-.terminal-overlay .success { color: #3fb950; }
-.terminal-overlay .warning { color: #d29922; }
-.terminal-overlay .command-echo { color: #3ddc84; margin: 10px 0 6px; }
-.terminal-overlay .section-title-t { color: #3ddc84; font-weight: 700; margin-bottom: 10px; }
-.terminal-overlay .input-line {
-  display: flex; align-items: center; gap: 8px;
-  margin-top: 16px; padding-top: 12px; border-top: 1px solid #30363d;
-}
-.terminal-overlay .command-input {
-  flex: 1; background: transparent; border: none; outline: none;
-  color: #3ddc84; font-family: var(--font-mono); font-size: 0.9rem;
-}
-.terminal-overlay .skill-tag {
-  display: inline-block; background: #0d1117; color: #3ddc84;
-  padding: 3px 9px; border-radius: 4px; margin: 3px 3px 3px 0;
-  font-size: 0.8rem; border: 1px solid #30363d;
-}
-.terminal-overlay ul { margin-left: 18px; list-style: disc; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
@@ -624,5 +598,5 @@ body.light-mode .orb { opacity: 0.18; }
 }
 
 @media print {
-  .site-header, .terminal-overlay, .scroll-cue, .site-footer { display: none; }
+  .site-header, .scroll-cue, .site-footer { display: none; }
 }
