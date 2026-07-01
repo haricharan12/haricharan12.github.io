@@ -411,6 +411,13 @@
   <p>Built by Haricharan S</p>
 </footer>
 
+<!-- Honeypot: not linked from anywhere a human would navigate, excluded via aria-hidden/tabindex/rel=nofollow,
+     and disallowed in robots.txt. No legitimate crawler or visitor should ever request this URL — a hit here
+     means something fetched it in spite of robots.txt / never rendered the page enough to notice it's hidden.
+     Replace the href with your own deployed logging endpoint (see honeypot-worker.js). -->
+<a href="https://REPLACE-WITH-YOUR-WORKER-URL.workers.dev/checkpoint"
+   class="visually-hidden" aria-hidden="true" tabindex="-1" rel="nofollow">field notes (draft)</a>
+
 <script src="script.js"></script>
 </body>
 </html>
