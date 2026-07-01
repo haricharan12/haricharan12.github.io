@@ -1,10 +1,8 @@
-# General crawlers (search engines) — welcome, except the field-notes trap below.
+# General crawlers (search engines) — welcome.
 User-agent: *
 Allow: /
-Disallow: /field-notes/
 
 # --- AI training / AI-answer crawlers: opted out. ---
-# Any of these that request /field-notes/ anyway is, by definition, ignoring this file.
 
 User-agent: GPTBot
 Disallow: /
