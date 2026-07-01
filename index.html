@@ -1,93 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Haricharan S - Red Teamer | Security Researcher | Application Security Engineer | AI Security">
-    <title>haricharan@portfolio:~$</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark light">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<title>Haricharan S — AI &amp; LLM Security / Senior Data Scientist</title>
+<meta name="description" content="Haricharan S is a Senior Data Scientist and AI/LLM Security specialist building red-team and blue-team defenses for agentic AI systems. CMU MS in Information Security, ex-Ernst &amp; Young red teamer, ex-Optum AI Security.">
+<meta name="author" content="Haricharan Sethuseetharaman">
+<link rel="canonical" href="https://haricharan12.github.io/">
 
-    <link rel="stylesheet" href="styles.css">
+<!-- Open Graph -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Haricharan S — AI &amp; LLM Security / Senior Data Scientist">
+<meta property="og:description" content="Building red-team and blue-team defenses for agentic AI systems. CMU MS in Information Security, ex-Ernst &amp; Young red teamer, ex-Optum AI Security.">
+<meta property="og:url" content="https://haricharan12.github.io/">
+<meta property="og:site_name" content="Haricharan S — Portfolio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Haricharan S — AI &amp; LLM Security">
+<meta name="twitter:description" content="Senior Data Scientist specializing in AI/LLM security, adversarial ML, and red teaming.">
+
+<!-- Structured data for search engines & AI agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-06-30",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://haricharan12.github.io/#person",
+    "name": "Haricharan Sethuseetharaman",
+    "alternateName": "Haricharan S",
+    "jobTitle": "Senior Data Scientist — AI & LLM Security",
+    "description": "Senior Data Scientist specializing in the security of AI and LLM-integrated systems, combining machine learning expertise with an offensive security background in red teaming, penetration testing, and threat modeling.",
+    "url": "https://haricharan12.github.io/",
+    "email": "mailto:sharicharan1729@gmail.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Fractal Analytics"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Carnegie Mellon University" },
+      { "@type": "CollegeOrUniversity", "name": "Vellore Institute of Technology" }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco Bay Area",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/haricharans",
+      "https://github.com/haricharan12"
+    ],
+    "knowsAbout": ["AI Security", "LLM Security", "Adversarial Machine Learning", "Agentic AI Security", "Red Teaming", "Penetration Testing", "Threat Modeling", "Application Security", "Digital Forensics"]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<!-- Note: pin an exact Subresource Integrity hash here once verified against this exact file
+     (see https://www.srihash.org/ or `curl | openssl dgst -sha384`) — an incorrect hash would
+     silently block Font Awesome from loading, so it's left unset rather than guessed. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="styles.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0e14'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%2364ffda' font-family='monospace'%3E%3E_%3C/text%3E%3C/svg%3E">
 </head>
 <body class="dark-mode">
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
-        <i class="fas fa-sun"></i>
-    </button>
 
-    <!-- Terminal Container -->
-    <div class="terminal-container">
-        <!-- Terminal Header -->
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn-close"></span>
-                <span class="btn-minimize"></span>
-                <span class="btn-maximize"></span>
-            </div>
-            <div class="terminal-title">haricharan@portfolio: ~</div>
-        </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Terminal Body -->
-        <div class="terminal-body" id="terminal">
-            <!-- Welcome Screen -->
-            <div class="terminal-line">
-                <span class="prompt">haricharan@portfolio:~$</span> <span class="typed-text">./welcome.sh</span>
-            </div>
-            <div class="output">
-                <pre class="ascii-art">
-      _                        _
-  ___| |_ _   ___  ___ __   ___| |_
- / __| __| | | \ \/ / '_ \ / _ \ __|
- \__ \ |_| |_| |>  <| | | |  __/ |_
- |___/\__|\__,_/_/\_\_| |_|\___|\__|
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
 
-</pre>
-                <p class="welcome-text">Welcome to my Portfolio</p>
-                <p class="info-text">Red Teamer | Security Researcher | Application Security Engineer</p>
-                <p class="info-text">MS in Information Security @ Carnegie Mellon University</p>
-                <p class="info-text">Mountain View, CA</p>
-                <br>
-                <p class="help-text">Type <span class="highlight">'help'</span> to see available commands or click on the menu below:</p>
-            </div>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">&gt;_</span>
+      <span class="brand-name">haricharan<span class="dot">.</span>s</span>
+    </a>
 
-            <!-- Navigation Menu -->
-            <div class="nav-menu">
-                <button onclick="executeCommand('about')" class="nav-btn">
-                    <i class="fas fa-user"></i> about
-                </button>
-                <button onclick="executeCommand('skills')" class="nav-btn">
-                    <i class="fas fa-code"></i> skills
-                </button>
-                <button onclick="executeCommand('experience')" class="nav-btn">
-                    <i class="fas fa-briefcase"></i> experience
-                </button>
-                <button onclick="executeCommand('research')" class="nav-btn">
-                    <i class="fas fa-flask"></i> research
-                </button>
-                <button onclick="executeCommand('education')" class="nav-btn">
-                    <i class="fas fa-graduation-cap"></i> education
-                </button>
-                <button onclick="executeCommand('contact')" class="nav-btn">
-                    <i class="fas fa-envelope"></i> contact
-                </button>
-                <button onclick="executeCommand('achievements')" class="nav-btn">
-                    <i class="fas fa-trophy"></i> achievements
-                </button>
-            </div>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <a href="#about" class="nav-link"><span class="nav-num">01</span> About</a>
+      <a href="#experience" class="nav-link"><span class="nav-num">02</span> Experience</a>
+      <a href="#projects" class="nav-link"><span class="nav-num">03</span> Projects</a>
+      <a href="#skills" class="nav-link"><span class="nav-num">04</span> Skills</a>
+      <a href="#contact" class="nav-link"><span class="nav-num">05</span> Contact</a>
+    </nav>
 
-            <!-- Command Output Area -->
-            <div id="output-area"></div>
-
-            <!-- Command Input -->
-            <div class="input-line">
-                <span class="prompt">haricharan@portfolio:~$</span>
-                <input type="text" id="command-input" class="command-input" autofocus autocomplete="off" spellcheck="false">
-            </div>
-        </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="terminal-toggle" title="Open terminal easter egg" aria-haspopup="dialog" aria-controls="terminal-overlay">
+        <i class="fas fa-terminal" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn" id="theme-toggle" title="Toggle theme">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+      </button>
+      <button class="icon-btn nav-burger" id="nav-burger" title="Menu" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
     </div>
+  </div>
+</header>
 
-    <script src="script.js"></script>
+<main id="main">
+
+  <!-- HERO -->
+  <section id="top" class="hero">
+    <div class="hero-inner reveal">
+      <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span>Available for AI security research &amp; speaking</p>
+      <h1 class="hero-title">
+        Haricharan S
+      </h1>
+      <p class="hero-role">Senior Data Scientist, <span class="grad-text">AI &amp; LLM Security</span></p>
+      <p class="hero-pitch">
+        I defend agentic AI systems the way an attacker would break them &mdash; red-teaming prompt injection,
+        memory poisoning, and model evasion, then building the guardrails that stop them. CMU-trained in
+        Information Security, seasoned by years of offensive security work at Ernst &amp; Young and Optum.
+      </p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-primary">View experience</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-kicker reveal">01 &mdash; About</p>
+      <h2 class="section-title reveal">A red teamer who went to work securing AI</h2>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p>
+            I'm a Senior Data Scientist at <strong>Fractal Analytics</strong>, where I build a red-team / blue-team
+            agent network that probes and defends enterprise AI systems &mdash; and the guardrails that let AI
+            teams ship without shipping their vulnerabilities alongside their features.
+          </p>
+          <p>
+            My path here ran through <strong>Ernst &amp; Young</strong>, where I spent two years as a red teamer
+            and security consultant breaking into networks and applications for a living, and <strong>Optum
+            (UnitedHealth Group)</strong>, where I built one of the earlier real-world MCP and agentic-AI threat
+            models used inside a Fortune 5 healthcare org. I hold an MS in Information Security from
+            <strong>Carnegie Mellon University</strong>, and I still compete on CMU's CTF team, <strong>Plaid
+            Parliament of Pwning</strong>.
+          </p>
+          <p>
+            What I care about: making AI systems that hold up under real adversarial pressure, and explaining
+            security risk in language executives and engineers can both act on.
+          </p>
+        </div>
+
+        <div class="about-facts reveal">
+          <div class="fact-card">
+            <i class="fas fa-location-dot" aria-hidden="true"></i>
+            <div><span class="fact-label">Based in</span><span class="fact-value">San Francisco Bay Area</span></div>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <div><span class="fact-label">Education</span><span class="fact-value">MS Information Security, Carnegie Mellon</span></div>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-briefcase" aria-hidden="true"></i>
+            <div><span class="fact-label">Currently</span><span class="fact-value">Sr. Data Scientist, Fractal Analytics</span></div>
+          </div>
+          <div class="fact-card">
+            <i class="fas fa-flag" aria-hidden="true"></i>
+            <div><span class="fact-label">CTF team</span><span class="fact-value">Plaid Parliament of Pwning (PPP)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-kicker reveal">02 &mdash; Experience</p>
+      <h2 class="section-title reveal">Where I've worked</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Senior Data Scientist</h3>
+                <p class="timeline-org">Fractal Analytics &middot; Palo Alto, CA</p>
+              </div>
+              <span class="timeline-date">Feb 2026 &ndash; Present</span>
+            </div>
+            <ul>
+              <li>Build a red-team / blue-team agent network that probes and defends enterprise AI solutions while building guardrails that let AI teams ship securely.</li>
+              <li>Apply adversarial ML and threat modeling to design safer, more resilient AI deployments across the organization.</li>
+              <li>Designed an enterprise-wide AI security training program covering prompt injection, DAN attacks, data poisoning, and model evasion for practitioners org-wide.</li>
+              <li>Led research into AI guardrail frameworks for large-scale healthcare environments, evaluating risk mitigation across LLM deployments and agentic systems for regulatory compliance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>AI Security Intern</h3>
+                <p class="timeline-org">Optum &middot; UnitedHealth Group &middot; Remote</p>
+              </div>
+              <span class="timeline-date">Jun 2025 &ndash; Aug 2025</span>
+            </div>
+            <ul>
+              <li>Directed security research for Model Context Protocol (MCP), developing trust-boundary threat models for AI agent workflows spanning LLMs, connectors, and enterprise integrations.</li>
+              <li>Built an automated AI Security Toolkit testing for prompt injection, memory poisoning, token leakage, sandbox escape, plugin persistence, and policy bypass &mdash; wired into CI/CD.</li>
+              <li>Authored an enterprise-ready MCP Security Checklist across server, client/host, and LLM invocation layers, linking each risk to a reproducible test and remediation.</li>
+              <li>Partnered with AI Governance and Cloud Security teams; remediation guidance addressed 65% of identified vulnerabilities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Senior Cybersecurity Consultant &mdash; Red Team</h3>
+                <p class="timeline-org">Ernst &amp; Young &middot; Bengaluru, India</p>
+              </div>
+              <span class="timeline-date">Jul 2022 &ndash; Jul 2024</span>
+            </div>
+            <ul>
+              <li>Ran red team assessments against internet-facing assets, escalating to domain admin via a Golden Ticket attack to demonstrate critical-system compromise.</li>
+              <li>Performed vulnerability assessment and penetration testing across 70+ applications and 10+ servers, reporting 200+ vulnerabilities (50+ high-risk) using CVSS v3.1.</li>
+              <li>Led mobile application security assessments and a social-engineering team that harvested 20+ high-value credentials, improving client security awareness by 80%+.</li>
+              <li>Mapped vendor and vulnerability exposure to NIST, ISO 27001, and MITRE ATT&amp;CK, translating technical findings into stakeholder-ready risk reporting.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item-compact reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-head">
+              <div>
+                <h3>Earlier: Blue Team Intern (Mphasis) &middot; AI/ML Intern (Next Labs)</h3>
+                <p class="timeline-org">Bangalore, India</p>
+              </div>
+              <span class="timeline-date">2020 &ndash; 2021</span>
+            </div>
+            <ul>
+              <li>Interned under Mphasis's CISO on SOC analysis, incident response, digital forensics, and AI-based SOAR tooling.</li>
+              <li>Built content-extraction and NLP web-scraping pipelines for a global fintech client at Next Labs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="section-kicker reveal">03 &mdash; Projects &amp; Research</p>
+      <h2 class="section-title reveal">Things I've built and broken</h2>
+
+      <div class="bento-grid">
+        <article class="project-card project-card-lg reveal">
+          <div class="project-icon"><i class="fas fa-diagram-project" aria-hidden="true"></i></div>
+          <h3>PyDiffer</h3>
+          <p class="project-tag">Differential testing framework for secure code evolution</p>
+          <p>Automated differential-execution pipeline with isolated sandboxes to safely run untrusted or LLM-generated patches and catch logic regressions, benchmarked against HumanEval, DyPyBench, and SWE-Bench.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">Sandboxing</span><span class="tag">LLM Code Eval</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></div>
+          <h3>SmartGuard</h3>
+          <p class="project-tag">AI-powered phishing detection</p>
+          <p>NLP preprocessing and TF-IDF feature extraction feeding a tuned SVM classifier, with a feedback loop for continual retraining.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">NLP</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+          <h3>NetSpector</h3>
+          <p class="project-tag">Network traffic anomaly detection</p>
+          <p>C-based packet capture paired with Python-driven unsupervised anomaly detection (Scapy + IsolationForest) and a visualization dashboard for incident investigation.</p>
+          <div class="tag-row"><span class="tag">C</span><span class="tag">Python</span><span class="tag">ML</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-magnifying-glass" aria-hidden="true"></i></div>
+          <h3>SFSView</h3>
+          <p class="project-tag">SquashFS forensic toolkit</p>
+          <p>Pure-Python parser for superblocks, inodes, and metadata tables that stays resilient against partially corrupted disk images &mdash; built for fast incident-response triage.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">Forensics</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-bug" aria-hidden="true"></i></div>
+          <h3>CVE-2024-42049 PoC</h3>
+          <p class="project-tag">TightVNC named-pipe exploit</p>
+          <p>Reliable proof-of-concept exploiting a named-pipe vulnerability in TightVNC Server for remote access and password decryption, with a fully reproducible lab attack chain.</p>
+          <div class="tag-row"><span class="tag">Exploit Dev</span><span class="tag">Windows</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-cloud" aria-hidden="true"></i></div>
+          <h3>Cloud Security Infrastructure</h3>
+          <p class="project-tag">Terraform + Python automation</p>
+          <p>Automated provisioning of cloud-hosted, access-controlled assessment environments for enterprise-grade spear-phishing exercises.</p>
+          <div class="tag-row"><span class="tag">Terraform</span><span class="tag">IaC</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon"><i class="fas fa-user-shield" aria-hidden="true"></i></div>
+          <h3>Apple App Store Privacy Label Research</h3>
+          <p class="project-tag">Usability research</p>
+          <p>User interviews and qualitative analysis surfacing usability gaps in Apple's privacy-label design, with concrete recommendations delivered to Apple.</p>
+          <div class="tag-row"><span class="tag">UX Research</span><span class="tag">Privacy</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-kicker reveal">04 &mdash; Skills</p>
+      <h2 class="section-title reveal">Toolbox</h2>
+
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-robot" aria-hidden="true"></i> AI &amp; ML Security</h3>
+          <div class="tag-row">
+            <span class="tag">Adversarial ML</span><span class="tag">LLM Security</span><span class="tag">Agentic AI Security</span>
+            <span class="tag">Threat Modeling</span><span class="tag">Model Evaluation</span><span class="tag">AI Governance</span>
+            <span class="tag">TensorFlow</span><span class="tag">PyTorch</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-user-secret" aria-hidden="true"></i> Offensive Security</h3>
+          <div class="tag-row">
+            <span class="tag">Red Teaming</span><span class="tag">Penetration Testing</span><span class="tag">Social Engineering</span>
+            <span class="tag">Active Directory</span><span class="tag">Exploit Development</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-code" aria-hidden="true"></i> Application Security</h3>
+          <div class="tag-row">
+            <span class="tag">Secure SDLC</span><span class="tag">Secure Code Review</span><span class="tag">Semgrep</span>
+            <span class="tag">SonarQube</span><span class="tag">CodeQL</span><span class="tag">OWASP ZAP</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-server" aria-hidden="true"></i> Platforms &amp; Cloud</h3>
+          <div class="tag-row">
+            <span class="tag">Kali Linux</span><span class="tag">GNU/Linux</span><span class="tag">Docker</span>
+            <span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Kubernetes</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-terminal" aria-hidden="true"></i> Languages &amp; Tools</h3>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">C</span><span class="tag">C#</span><span class="tag">JavaScript</span>
+            <span class="tag">Go</span><span class="tag">Bash</span><span class="tag">Burp Suite</span><span class="tag">Nmap</span>
+            <span class="tag">BloodHound</span><span class="tag">Wireshark</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3><i class="fas fa-scale-balanced" aria-hidden="true"></i> Frameworks &amp; DevOps</h3>
+          <div class="tag-row">
+            <span class="tag">NIST</span><span class="tag">AI RMF</span><span class="tag">ISO 27001</span><span class="tag">MITRE ATT&amp;CK</span>
+            <span class="tag">CVSS v3.1</span><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements-strip reveal">
+        <span class="badge"><i class="fas fa-certificate"></i> CRTP</span>
+        <span class="badge"><i class="fas fa-microsoft"></i> AZ-500</span>
+        <span class="badge"><i class="fas fa-microsoft"></i> AI Security &amp; Governance</span>
+        <span class="badge"><i class="fas fa-network-wired"></i> CCNA</span>
+        <span class="badge"><i class="fas fa-microchip"></i> IoT Security Specialist</span>
+        <span class="badge"><i class="fas fa-flag"></i> CMU CTF &mdash; PPP</span>
+        <span class="badge"><i class="fas fa-award"></i> DEFCON '33 Scholar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="section-inner">
+      <p class="section-kicker reveal">05 &mdash; Contact</p>
+      <h2 class="section-title reveal">Let's talk about securing what you're building</h2>
+      <p class="contact-lead reveal">
+        Open to conversations on AI/LLM security, red teaming, and research collaboration.
+        Easiest way to reach me is email.
+      </p>
+      <div class="contact-links reveal">
+        <a class="contact-link" href="mailto:sharicharan1729@gmail.com">
+          <i class="fas fa-envelope" aria-hidden="true"></i> sharicharan1729@gmail.com
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/haricharans" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> linkedin.com/in/haricharans
+        </a>
+        <a class="contact-link" href="https://github.com/haricharan12" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github" aria-hidden="true"></i> github.com/haricharan12
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Built by Haricharan S &middot; <button id="footer-terminal-btn" class="link-btn">open the terminal</button> if you want it the old way.</p>
+</footer>
+
+<!-- Terminal easter egg overlay -->
+<div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Terminal easter egg" hidden>
+  <div class="terminal-container">
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <button class="btn-close" id="terminal-close" title="Close" aria-label="Close terminal"></button>
+        <span class="btn-minimize"></span>
+        <span class="btn-maximize"></span>
+      </div>
+      <div class="terminal-title">haricharan@portfolio: ~</div>
+    </div>
+    <div class="terminal-body" id="terminal-body">
+      <div class="terminal-line">
+        <span class="prompt">haricharan@portfolio:~$</span> <span class="typed-text">./welcome.sh</span>
+      </div>
+      <div class="output">
+        <p class="welcome-text">Welcome to the legacy terminal.</p>
+        <p class="help-text">Type <span class="highlight">'help'</span> to see available commands.</p>
+      </div>
+      <div id="terminal-output-area"></div>
+      <div class="input-line">
+        <span class="prompt">haricharan@portfolio:~$</span>
+        <input type="text" id="terminal-input" class="command-input" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

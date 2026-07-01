@@ -1,3 +1,33 @@
+# Portfolio Updates — June 2026 Redesign
+
+## Full layout redesign
+
+Replaced the terminal-only interface with a modern, narrative-driven single page (hero, about, experience
+timeline, project bento grid, skills, contact). The Linux terminal is preserved as an opt-in easter egg
+(terminal icon in the header, or the footer link, or pressing `` ` ``) rather than the default experience —
+research showed a CLI-only interface reads as a barrier to non-technical recruiters and hiring managers.
+
+Also added, based on subagent research into AI-crawler friendliness and static-site security hardening:
+- `llms.txt`, `robots.txt` (with explicit allow rules for GPTBot/ClaudeBot/PerplexityBot/Google-Extended), `sitemap.xml`
+- schema.org `Person`/`ProfilePage` JSON-LD, Open Graph and Twitter Card meta tags
+- A strict `Content-Security-Policy` meta tag (`script-src 'self'`), removal of all inline `onclick` handlers
+  in favor of `addEventListener`, and `textContent`/DOM-node construction instead of `innerHTML` wherever the
+  content isn't fixed, hand-authored HTML
+
+## Content refresh (reconciled from 3 uploaded resumes, June 2026)
+
+- Current role updated: **Senior Data Scientist, Fractal Analytics** (Palo Alto, CA — Feb 2026–Present),
+  building red-team/blue-team AI agent networks and guardrails for enterprise AI
+- Location updated to San Francisco Bay Area
+- Positioning shifted from pure "Red Teamer" to **AI & LLM Security / Senior Data Scientist**, reflecting the
+  career move from offensive security into securing agentic AI systems
+- Experience, education, skills, certifications, and the projects list (PyDiffer, SmartGuard, NetSpector,
+  SFSView, CVE-2024-42049 PoC, cloud security automation, Apple privacy research) reconciled across the three
+  resumes into one consistent, current profile
+- Phone number kept out of all public sections (email/LinkedIn/GitHub only), consistent with prior privacy choice
+
+---
+
 # Portfolio Updates - Latest Resume (2025)
 
 ## ✅ Changes Made

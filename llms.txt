@@ -1,0 +1,28 @@
+# Haricharan S
+
+> Senior Data Scientist specializing in AI &amp; LLM security. Combines machine learning expertise with an offensive-security background (red teaming, penetration testing, threat modeling) to defend agentic AI systems against adversarial threats such as prompt injection, memory poisoning, and model evasion. MS in Information Security, Carnegie Mellon University.
+
+## Current role
+
+- Senior Data Scientist, Fractal Analytics, Palo Alto CA (Feb 2026–present): builds red-team/blue-team agent networks and guardrails for enterprise AI systems.
+
+## Background
+
+- AI Security Intern, Optum / UnitedHealth Group (Jun–Aug 2025): built MCP trust-boundary threat models and an automated AI security toolkit for agentic systems.
+- Senior Cybersecurity Consultant (Red Team), Ernst & Young, Bengaluru (Jul 2022–Jul 2024): red team assessments, penetration testing, vulnerability management across 70+ applications.
+- MS, Information Security, Carnegie Mellon University (2024–2025).
+- BTech, Electronics & Communication Engineering, Vellore Institute of Technology (2018–2022).
+
+## Key Pages
+
+- [Portfolio home](https://haricharan12.github.io/): full bio, experience timeline, projects, skills, contact.
+- [About](https://haricharan12.github.io/#about): background and current focus.
+- [Experience](https://haricharan12.github.io/#experience): work history.
+- [Projects](https://haricharan12.github.io/#projects): PyDiffer, SmartGuard, NetSpector, SFSView, CVE-2024-42049 exploit PoC, and more.
+- [Contact](https://haricharan12.github.io/#contact): email, LinkedIn, GitHub.
+
+## Contact
+
+- Email: sharicharan1729@gmail.com
+- LinkedIn: https://linkedin.com/in/haricharans
+- GitHub: https://github.com/haricharan12
